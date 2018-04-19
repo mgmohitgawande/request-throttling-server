@@ -1,0 +1,25 @@
+{
+  "name": "throttling-server",
+  "version": "1.0.0",
+  "description": "hop between third party apis and internal system, rate limiting system using node express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "redis",
+    "throttling"
+  ],
+  "author": "Mohit Gawande",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "redis": "^2.8.0",
+    "request": "^2.85.0"
+  }
+}
