@@ -1,7 +1,7 @@
 var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
-var router = express.Router()
+var router         = express.Router()
 
 var port = process.env.PORT || 8080; 
 app.use(bodyParser.json()); 
