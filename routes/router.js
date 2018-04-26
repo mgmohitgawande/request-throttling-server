@@ -12,7 +12,8 @@ module.exports = function(app){
     }
     var outbrainLimiter = outbrainLimiterFactory()
     app.use(function(req, res, next){
-        console.log(new Date(), 'logging req', req.body, req.headers, req.url)
+        console.log(new Date(), 'logging req', req.body, req.headers, req.url);
+        next();
     })
     app.use('/outbrain', (req, res, next) => outbrainLimiter(req.url.split('/')[6]).submit((n) => n(), next), proxy('https://api.outbrain.com'))
     
