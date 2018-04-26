@@ -1,0 +1,4 @@
+{
+    "00ade71dacf3187f055570427eedb3fee0" : {"maxConcurrent": 1, "minTime": 40000},
+    "default" : {"maxConcurrent": 5, "minTime": 12000}
+}
