@@ -20,9 +20,10 @@ module.exports = function(app){
         next();
     })
     router.use('/', (req, res, next) => {
-        console.log(new Date(), 'queueing request for outbrain', req.id)
-        outbrainLimiter(req.url.split('/')[5], req.id).submit((n) => {
-            console.log(new Date(), 'firing request for outbrain', req.id)
+        var url_parts = req.url.split('/')
+        console.log(new Date(), 'queueing request for outbrain', req.id, url_parts[5])
+        outbrainLimiter(url_parts[5], req.id).submit((n) => {
+            console.log(new Date(), 'firing request for outbrain', req.id, url_parts[5])
             n()
         }, next)
     }, function(req, res, next){
